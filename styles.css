@@ -296,6 +296,17 @@ th, td {
   min-width: 50px;
 }
 
+/* Oral exam column – slightly wider than default */
+.col-oral-exam, .col-oral-work,
+td:nth-child(7), td:nth-child(2) {
+  min-width: 56px;
+  width: 56px;
+}
+th.col-oral-exam, th.col-oral-work {
+  min-width: 56px;
+  width: 56px;
+}
+
 th:nth-child(1) { min-width: 120px; }
 th:nth-child(7) { min-width: 52px; }
 th:nth-child(8) { min-width: 52px; }
