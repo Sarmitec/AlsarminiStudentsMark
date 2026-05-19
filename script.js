@@ -54,7 +54,7 @@ function createRow() {
     <td><input type="number" min="0" max="100" class="exam-input" data-part="oralExam" /></td>
     <td><input type="number" min="0" max="100" class="exam-input" data-part="writtenExam" /></td>
     <td><input type="text" class="result-cell" readonly value="0" /></td>
-    <td><input type="text" class="result-cell h alf-result" readonly value="0" /></td>
+      <td><input type="text" class="result-cell half-result" readonly value="0" /></td>
   `;
   attachInputListeners(row);
   return row;
@@ -95,3 +95,19 @@ function resetTable() {
 
 // Initialize default row listeners
 resetTable();
+
+// ── Rotate / un-rotate screen ──────────────────
+const rotateButton = document.getElementById("rotateButton");
+rotateButton.addEventListener("click", () => {
+  document.body.classList.toggle("rotated-mode");
+  rotateButton.textContent = document.body.classList.contains("rotated-mode") ? "🔙" : "🔄";
+});
+
+// ── Table fullscreen mode ──────────────────────
+const fullTableButton = document.getElementById("fullTableButton");
+fullTableButton.addEventListener("click", () => {
+  const body = document.body;
+  const isFull = body.classList.toggle("table-fullscreen-mode");
+  fullTableButton.textContent = isFull ? "↙ إخفاء كامل الشاشة" : "⛶ ملء الشاشة بالجدول";
+  fullTableButton.title = isFull ? "العودة للوضع الطبيعي" : "ملء الشاشة بالجدول";
+});
