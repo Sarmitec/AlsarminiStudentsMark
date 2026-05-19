@@ -207,90 +207,6 @@ button:focus {
   outline-offset: 2px;
 }
 
-.rotate-btn {
-  border: none;
-  border-radius: 999px;
-  padding: 0.75rem 1rem;
-  background: rgba(255,255,255,0.25);
-  color: white;
-  cursor: pointer;
-  font-size: 1.15rem;
-  line-height: 1;
-  transition: background 0.2s, transform 0.3s;
-}
-.rotate-btn:hover {
-  background: rgba(255,255,255,0.4);
-}
-.rotate-btn:active {
-  transform: scale(0.9);
-}
-
-/* ── Rotated (landscape) mode ─────────────────── */
-body.rotated-mode {
-  writing-mode: vertical-rl;
-  direction: ltr;
-}
-body.rotated-mode .topbar {
-  writing-mode: horizontal-tb;
-  flex-direction: row;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  height: 60px;
-  overflow: hidden;
-}
-body.rotated-mode .topbar .brand {
-  writing-mode: horizontal-tb;
-}
-body.rotated-mode .topbar .menu,
-body.rotated-mode .topbar .menu-button,
-body.rotated-mode .topbar .menu-list,
-body.rotated-mode .topbar ul,
-body.rotated-mode .topbar li {
-  writing-mode: horizontal-tb;
-}
-body.rotated-mode .menu-list {
-  top: calc(100% + 0.5rem);
-  right: 0;
-  left: auto;
-}
-body.rotated-mode .page-content {
-  writing-mode: horizontal-tb;
-  width: 100vh;
-  height: 100vw;
-  min-height: 100vh;
-  padding: 0;
-  overflow-x: auto;
-  overflow-y: hidden;
-  display: flex;
-  align-items: flex-start;
-}
-body.rotated-mode .hero,
-body.rotated-mode .table-section,
-body.rotated-mode footer {
-  writing-mode: horizontal-tb;
-}
-body.rotated-mode .hero {
-  text-align: center;
-  flex-shrink: 0;
-  white-space: nowrap;
-  padding: 0.5rem 1.5rem;
-}
-body.rotated-mode .table-section {
-  flex-shrink: 0;
-  padding: 0.75rem 1rem;
-  border-radius: 0;
-  min-width: 780px;
-}
-body.rotated-mode .table-wrap table {
-  min-width: 780px;
-}
-body.rotated-mode footer {
-  text-align: center;
-  padding: 0.75rem;
-  flex-shrink: 0;
-}
-
 #fullTableButton {
   border: none;
   border-radius: 999px;
@@ -318,36 +234,55 @@ body.table-fullscreen-mode .page-content {
   margin: 0;
   height: 100vh;
   height: 100dvh;
-  width: 100vw;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 body.table-fullscreen-mode .table-section {
   margin-top: 0;
   border-radius: 0;
   border: none;
-  padding: 0.5rem;
+  padding: 0;
   box-shadow: none;
-  height: 100vh;
-  height: 100dvh;
+  flex: 1;
+  min-height: 0;
   display: flex;
   flex-direction: column;
 }
 
-body.table-fullscreen-mode .table-header {
+body.table-fullscreen-mode table {
+  min-width: 700px;
+  table-layout: auto;
+}
+
+body.table-fullscreen-mode th,
+body.table-fullscreen-mode td {
+  min-width: 46px;
+  padding: 0.5rem 0.35rem;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+body.table-fullscreen-mode input[type="number"],
+body.table-fullscreen-mode .result-cell,
+body.table-fullscreen-mode .student-name {
+  min-width: 3ch;
+  width: auto;
+  font-size: 0.95rem;
+}
+
+body.table-fullscreen-mode .table-header-buttons {
   flex-shrink: 0;
-  padding: 0.5rem 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 body.table-fullscreen-mode .table-wrap {
   flex: 1;
+  min-height: 0;
   overflow-y: auto;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-}
-
-body.table-fullscreen-mode .table-wrap table {
-  min-width: 780px;
 }
 
 body.table-fullscreen-mode .table-wrap thead {
@@ -355,6 +290,17 @@ body.table-fullscreen-mode .table-wrap thead {
   top: 0;
   z-index: 2;
 }
+
+/* ── All screen sizes – decent min-widths ───── */
+th, td {
+  min-width: 50px;
+}
+
+th:nth-child(1) { min-width: 120px; }
+th:nth-child(7) { min-width: 52px; }
+th:nth-child(8) { min-width: 52px; }
+th:nth-child(9) { min-width: 52px; }
+th:nth-child(10) { min-width: 52px; }
 
 @media (max-width: 900px) {
   .topbar {

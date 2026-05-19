@@ -96,18 +96,11 @@ function resetTable() {
 // Initialize default row listeners
 resetTable();
 
-// ── Rotate / un-rotate screen ──────────────────
-const rotateButton = document.getElementById("rotateButton");
-rotateButton.addEventListener("click", () => {
-  document.body.classList.toggle("rotated-mode");
-  rotateButton.textContent = document.body.classList.contains("rotated-mode") ? "🔙" : "🔄";
-});
-
 // ── Table fullscreen mode ──────────────────────
 const fullTableButton = document.getElementById("fullTableButton");
 fullTableButton.addEventListener("click", () => {
   const body = document.body;
   const isFull = body.classList.toggle("table-fullscreen-mode");
-  fullTableButton.textContent = isFull ? "↙ إخفاء كامل الشاشة" : "⛶ ملء الشاشة بالجدول";
+  fullTableButton.textContent = isFull ? "↙ إخفاء كامل الشاشة" : "⛶ جدول كامل";
   fullTableButton.title = isFull ? "العودة للوضع الطبيعي" : "ملء الشاشة بالجدول";
 });
