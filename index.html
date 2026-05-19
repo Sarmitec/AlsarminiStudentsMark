@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alsarmini Students Mark</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" type="image/jpeg" href="c.jpg" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <link rel="shortcut icon" href="c.jpg" />
+  <meta name="theme-color" content="#2c6dff" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="AS Mark" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Alsarmini Students Mark</div>
+    <div style="display: flex; align-items: center; gap: 1rem;">
+      <div class="menu">
+        <button class="menu-button" id="subjectMenuButton">المواد ▼</button>
+        <ul class="menu-list" id="subjectMenu">
+          <li data-subject="العربية">اللغة العربية</li>
+          <li data-subject="الرياضيات">الرياضيات</li>
+          <li data-subject="الفيزياء">الفيزياء</li>
+          <li data-subject="الكيمياء">الكيمياء</li>
+          <li data-subject="العلوم">العلوم</li>
+          <li data-subject="الفرنسية">الفرنسية</li>
+          <li data-subject="الانكليزية">الانكليزية</li>
+          <li data-subject="التربية الدينية">التربية الدينية</li>
+          <li data-subject="التاريخ">التاريخ</li>
+          <li data-subject="الجغرافيا">الجغرافيا</li>
+          <li data-subject="الفلسفة">الفلسفة</li>
+        </ul>
+      </div>
+      <a href="support.html" class="support-link" style="color: white; text-decoration: none; font-size: 1rem;">الدعم الفني</a>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <section class="hero">
+      <h1 id="subjectTitle">اللغة العربية</h1>
+      <p>جدول محصلات الطلاب مع حساب درجات الأعمال والامتحان تلقائياً.</p>
+    </section>
+
+    <section class="table-section">
+      <div class="table-header">
+        <h2>محصلة الطلاب</h2>
+        <button id="addRowButton" class="add-row-button">إضافة طالب جديد +</button>
+      </div>
+
+      <div class="table-wrap">
+        <table id="marksTable">
+          <thead>
+            <tr>
+              <th rowspan="2">اسم الطالب</th>
+              <th colspan="4">درجات الأعمال</th>
+              <th rowspan="2">مجموع الأعمال</th>
+              <th rowspan="2">شفهي</th>
+              <th rowspan="2">تحريري</th>
+              <th rowspan="2">المجموع النهائي</th>
+              <th rowspan="2">المحصلة</th>
+            </tr>
+            <tr>
+              <th>شفهي</th>
+              <th>وظائف</th>
+              <th>مذاكرة 1</th>
+              <th>مذاكرة 2</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+            <tr>
+              <td><input type="text" placeholder="اسم الطالب" class="student-name" /></td>
+              <td><input type="number" min="0" max="100" class="work-input" data-part="oral" /></td>
+              <td><input type="number" min="0" max="100" class="work-input" data-part="homework" /></td>
+              <td><input type="number" min="0" max="100" class="work-input" data-part="study1" /></td>
+              <td><input type="number" min="0" max="100" class="work-input" data-part="study2" /></td>
+              <td><input type="text" class="result-cell" readonly value="0" /></td>
+              <td><input type="number" min="0" max="100" class="exam-input" data-part="oralExam" /></td>
+              <td><input type="number" min="0" max="100" class="exam-input" data-part="writtenExam" /></td>
+              <td><input type="text" class="result-cell" readonly value="0" /></td>
+              <td><input type="text" class="result-cell" readonly value="0" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer style="text-align: center; padding: 1.5rem 0 0.5rem 0; color: #555; font-size: 1.05rem;">
+    مطور الموقع Abdullah Alsarmini
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

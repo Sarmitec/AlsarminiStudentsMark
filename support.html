@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الدعم الفني - Alsarmini Students Mark</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .support-page {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 3rem;
+    }
+
+    .support-back {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .support-back:hover {
+      text-decoration: underline;
+    }
+
+    .support-hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 2rem 2rem 1.5rem;
+      box-shadow: 0 10px 30px rgba(42, 63, 112, 0.08);
+      text-align: center;
+      margin-bottom: 1.75rem;
+    }
+
+    .support-hero .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: var(--surface-strong);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      font-size: 2.4rem;
+    }
+
+    .support-hero h1 {
+      margin: 0 0 0.35rem;
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+    }
+
+    .support-hero .role {
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 1.05rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .support-hero .meta {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    .support-hero .meta a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .support-hero .meta a:hover {
+      text-decoration: underline;
+    }
+
+    .support-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(42, 63, 112, 0.08);
+      margin-bottom: 1.75rem;
+    }
+
+    .support-card h2 {
+      margin: 0 0 0.75rem;
+      font-size: 1.25rem;
+      color: #22305d;
+    }
+
+    .support-card p {
+      margin: 0 0 0.6rem;
+      color: #333a4d;
+      line-height: 1.85;
+      font-size: 1.02rem;
+    }
+
+    .support-card ul {
+      margin: 0.5rem 0 0;
+      padding-right: 1.5rem;
+      color: #333a4d;
+      line-height: 1.9;
+      font-size: 1.02rem;
+    }
+
+    .contact-section {
+      background: linear-gradient(135deg, #2c6dff 0%, #4f8cff 100%);
+      border-radius: 22px;
+      padding: 2rem 2.25rem;
+      text-align: center;
+      color: white;
+      box-shadow: 0 10px 30px rgba(44, 109, 255, 0.25);
+    }
+
+    .contact-section h2 {
+      margin: 0 0 0.6rem;
+      font-size: 1.3rem;
+    }
+
+    .contact-section p {
+      margin: 0 0 1.2rem;
+      font-size: 1.05rem;
+      opacity: 0.92;
+    }
+
+    .contact-section a {
+      display: inline-block;
+      background: white;
+      color: #2c6dff;
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 0.7rem 1.8rem;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    }
+
+    .contact-section a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
+    }
+
+    @media (max-width: 660px) {
+      .support-page {
+        padding: 1.5rem 1rem 2rem;
+      }
+      .support-hero,
+      .support-card,
+      .contact-section {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="support-page">
+
+    <a href="index.html" class="support-back">⬅ العودة إلى الموقع</a>
+
+    <!-- بطاقة المطور -->
+    <div class="support-hero">
+      <div class="avatar">👨‍💻</div>
+      <h1>عبدالله السرميني</h1>
+      <div class="role">تصميم وتطوير الموقع</div>
+      <div class="meta">
+        الجمهورية العربية السورية – اللاذقية<br />
+        مواليد 2007<br />
+        📧 البريد الإلكتروني: <a href="mailto:alsarmini7@gmail.com">alsarmini7@gmail.com</a>
+      </div>
+    </div>
+
+    <!-- فكرة الموقع -->
+    <div class="support-card">
+      <h2>💡 فكرة الموقع</h2>
+      <p>
+        موقع "Alsarmini Students Mark" هو منصة بسيطة وخفيفة صُممت خصيصاً لتسهيل عملية إدخال درجات الطلاب وتنظيمها في جدول منظم وواضح.
+        فبدلاً من الاعتماد على الأوراق أو البرامج المعقدة التي تحتاج إلى تثبيت وتخليص الحسابات يدوياً،
+        يجمع هذا الموقع كل شيء في واجهة واحدة تعمل مباشرة في المتصفح.
+      </p>
+      <p>
+        الفكرة جاءت من الحاجة اليومية للمعلمين في المدارس السورية لتسريع عملية تقييم الطلاب
+        وتخفيض الأخطاء الحسابية الناتجة عن الجمع اليدوي للدرجات، وكل ذلك بضغطة زر واحدة.
+      </p>
+    </div>
+
+    <!-- أهمية الموقع -->
+    <div class="support-card">
+      <h2>⭐ أهمية الموقع</h2>
+      <ul>
+        <li>يوفر الوقت والجهد على المعلمين في إعداد الجداول وتجميع النتائج.</li>
+        <li>يقلل من الأخطاء الناتجة عن الحساب اليدوي للدرجات.</li>
+        <li>يعمل مباشرة في المتصفح دون حاجة إلى برامج إضافية أو تثبيت.</li>
+        <li>يدعم جميع المواد الدراسية بسهولة التبديل بينها.</li>
+        <li>مفتوح المصدر ومجاني للجميع.</li>
+        <li>واجهة عربية بسيطة تناسب جميع المستخدمين.</li>
+        <li>يعمل على جميع الأجهزة – حاسوب أو هاتف – دون أي مشاكل.</li>
+      </ul>
+    </div>
+
+    <!-- المشكلة التي يحلها -->
+    <div class="support-card">
+      <h2>🔧 المشكلة التي يحلها الموقع</h2>
+      <p>
+        يواجه المعلمون يومياً صعوبات في جمع وتنظيم درجات الطلاب، خاصة عند إدخال درجات الأعمال
+        والشفهي والتحريري وحساب المجموع النهائي يدوياً.
+        هذه العملية تستغرق وقتاً طويلاً وتترك مجالاً كبيراً لحدوث أخطاء حسابية.
+      </p>
+      <p>
+        هذا الموقع يحل هذه المشكلة بتقديم جدول تفاعلي يقوم تلقائياً بحساب مجموع الأعمال والمجموع
+        النهائي فور إدخال الدرجات، مما يضمن الدقة والسرعة في نفس الوقت.
+      </p>
+    </div>
+
+    <!-- قسم التواصل -->
+    <div class="contact-section">
+      <h2>📬 هل لديك أي سؤال أو اكتشفت مشكلة في الموقع؟</h2>
+      <p>
+        لا تتردد في التواصل معي مباشرة عبر البريد الإلكتروني، وسأقوم بالرد عليك في أقرب وقت.
+      </p>
+      <a href="mailto:alsarmini7@gmail.com">alsarmini7@gmail.com</a>
+    </div>
+
+  </main>
+
+  <!-- تذييل الصفحة -->
+  <footer style="text-align: center; padding: 1.5rem 0 0.5rem 0; color: #555; font-size: 1.05rem;">
+    مطور الموقع Abdullah Alsarmini
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
